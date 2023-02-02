@@ -72,4 +72,7 @@ button#prev {
   .testimonial-wrapper {
     font-size: 14px;
   }
+  .testimonial-container p {
+    font-size: 1.8rem;
+  }
 }
