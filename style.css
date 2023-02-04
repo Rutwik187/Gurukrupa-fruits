@@ -42,19 +42,34 @@ section {
 }
 
 .btn {
-  display: inline-block;
-  margin-top: 1rem;
-  /* background: var(--yellow); */
-  color: var(--yellow);
-  padding: 0.8rem 3rem;
-  font-size: 1.7rem;
-  text-align: center;
+  outline: 0;
+  grid-gap: 8px;
+  align-items: center;
+  background-color: var(--yellow);
+  color: var(--black);
+  border: 1px solid var(--black);
+  border-radius: 4px;
   cursor: pointer;
-  border: 2px solid var(--yellow);
+  display: inline-flex;
+  flex-shrink: 0;
+  font-size: 16px;
+  gap: 8px;
+  justify-content: center;
+  line-height: 1.5;
+  overflow: hidden;
+  padding: 12px 16px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  transition: all 0.14s ease-out;
+  white-space: nowrap;
 }
 
 .btn:hover {
-  transform: scale(1.1);
+  box-shadow: 4px 4px 0 var(--black);
+  transform: translate(-4px, -4px);
+}
+.btn:focus-visible {
+  outline-offset: 1px;
 }
 
 .heading {
@@ -71,14 +86,6 @@ section {
   text-transform: uppercase;
 }
 
-.header-1 {
-  background: #eee;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem 9%;
-}
-
 .logo {
   color: var(--black);
   font-weight: bolder;
@@ -88,38 +95,6 @@ section {
 .logo i {
   padding-right: 0.5rem;
   color: var(--yellow);
-}
-
-.header-1 .mail-phoneNo-info {
-  display: flex;
-  height: 5rem;
-  align-items: center;
-  font-size: 2rem;
-  font-weight: bold;
-}
-.header-1 .mail-phoneNo-info .call {
-  margin-right: 2rem;
-}
-
-.header-1 .mail-phoneNo-info #search-box {
-  height: 100%;
-  width: 100%;
-  padding: 1rem;
-  font-size: 2rem;
-  color: #333;
-  border: 0.1rem solid rgba(0, 0, 0, 0.3);
-  text-transform: none;
-}
-
-.header-1 .search-box-container label {
-  height: 100%;
-  width: 8rem;
-  font-size: 2.5rem;
-  line-height: 5rem;
-  color: #fff;
-  background: var(--yellow);
-  text-align: center;
-  cursor: pointer;
 }
 
 .header-2 {
@@ -145,11 +120,13 @@ section {
   font-size: 2rem;
   border-radius: 0.5rem;
   color: var(--black);
+  transition: all 0.3s;
 }
 
 .header-2 .navbar a:hover {
-  background: var(--yellow);
-  color: #fff;
+  letter-spacing: 2px;
+  color: var(--yellow);
+  /* color: #fff; */
 }
 
 .header-2 .icons a {
@@ -165,7 +142,7 @@ section {
 #menu-bar {
   font-size: 3rem;
   border-radius: 0.5rem;
-  border: 0.1rem solid var(--black);
+  /* border: 0.1rem solid var(--black); */
   padding: 0.8rem 1.5rem;
   color: var(--black);
   cursor: pointer;
@@ -489,6 +466,7 @@ section {
   }
 
   .header-2 .navbar {
+    background: white;
     position: absolute;
     top: 100%;
     left: 0;
@@ -507,8 +485,8 @@ section {
     font-size: 2.5rem;
     display: block;
     text-align: center;
-    background: var(--yellow);
-    color: white;
+    background: white;
+    color: var(--black);
     padding: 2rem;
     border-radius: 0;
     /* margin: 1.5rem 0; */
