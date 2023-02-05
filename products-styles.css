@@ -37,6 +37,7 @@
 }
 
 .el-wrapper {
+  position: relative;
   width: 360px;
   padding: 15px;
   margin: 15px auto;
@@ -246,4 +247,30 @@
   letter-spacing: 0.045em;
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+.ribbon {
+  --f: 10px; /* control the folded part*/
+  --r: 15px; /* control the ribbon shape */
+  --t: 10px; /* the top offset */
+
+  position: absolute;
+  inset: var(--t) calc(-1 * var(--f)) auto auto;
+  /* padding: 0 10px var(--f) calc(10px + var(--r)); */
+  padding: 2.5rem;
+  z-index: 10;
+  font-size: 2rem;
+  font-weight: bold;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - var(--f)),
+    calc(100% - var(--f)) 100%,
+    calc(100% - var(--f)) calc(100% - var(--f)),
+    0 calc(100% - var(--f)),
+    var(--r) calc(50% - var(--f) / 2)
+  );
+  color: var(--black);
+  background: var(--yellow);
+  box-shadow: 0 calc(-1 * var(--f)) 0 inset #0005;
 }

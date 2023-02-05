@@ -175,6 +175,12 @@ section {
   color: #666;
 }
 
+.category-info-text {
+  text-align: center;
+  font-size: 2rem;
+  color: #666;
+}
+
 .home .content h3 {
   font-size: 5rem;
   color: var(--black);
