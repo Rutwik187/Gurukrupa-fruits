@@ -477,9 +477,12 @@ section {
     top: 100%;
     left: 0;
     right: 0;
+    box-shadow: var(--box-shadow);
+    z-index: 10;
     /* background: var(--black); */
     padding: 1rem 2rem;
     display: none;
+    border-radius: 0 0 10px 10px;
     /* border-radius: 10px; */
   }
 
