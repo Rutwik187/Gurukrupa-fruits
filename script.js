@@ -107,3 +107,13 @@ let displayTestimonial = () => {
     `;
 };
 window.onload = displayTestimonial;
+
+
+// gallery
+// document.querySelectorAll('.gallery-container video').forEach(vid => {
+//     vid.onclick = () => {
+//         console.log(vid);
+//         document.querySelector('.popup-video').style.display = 'block';
+//         document.querySelector('.popup-video video').src = vid.getAttribute('src');
+//     }
+// });
