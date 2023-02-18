@@ -23,6 +23,7 @@
   text-decoration: none;
   text-transform: capitalize;
   transition: all 0.2s linear;
+  /* position: relative; */
 }
 
 *::selection {
@@ -70,6 +71,13 @@ section {
 }
 .btn:focus-visible {
   outline-offset: 1px;
+}
+
+.whatsapp-btn {
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+  z-index: 100;
 }
 
 .heading {
@@ -157,7 +165,7 @@ section {
 }
 
 .home .image {
-  flex: 1 1 40rem;
+  flex: 1 1 30rem;
   padding-top: 5rem;
 }
 
@@ -241,13 +249,12 @@ section {
   border-radius: 10px;
   outline-offset: -1rem;
   text-align: center;
-  box-shadow: var(--box-shadow);
+  /*  */
 }
 
-/* .features .box-container .box:hover {
-  outline: var(--outline-hover);
-  outline-offset: 0rem;
-} */
+.features .box-container .box:hover {
+  /* box-shadow: var(--box-shadow); */
+}
 
 .features .box-container .box img {
   margin: 1rem 0;
@@ -267,10 +274,16 @@ section {
   padding: 1rem 0;
 }
 
+#product {
+  margin-top: 4rem;
+}
+
 .product .box-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .deal {
@@ -327,6 +340,18 @@ section {
   font-size: 2rem;
 }
 
+.contact-and-maps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7rem;
+}
+.maps {
+  flex: 1;
+}
+.contact {
+  flex: 1.5;
+}
 .contact form {
   text-align: center;
   padding: 2rem;
@@ -354,40 +379,6 @@ section {
   height: 20rem;
   resize: none;
   width: 100%;
-}
-
-.newsletter {
-  background: url(../images/newsletter-bg.jpg) no-repeat;
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  padding: 5rem 2rem;
-}
-
-.newsletter h3 {
-  font-size: 3rem;
-  color: var(--black);
-}
-
-.newsletter form {
-  max-width: 55rem;
-  display: flex;
-  align-items: center;
-  margin: 1rem auto;
-  padding: 1.5rem;
-  background: rgba(0, 0, 0, 0.1);
-}
-
-.newsletter form .box {
-  width: 100%;
-  padding: 0.7rem 1.5rem;
-  font-size: 1.7rem;
-  color: #333;
-  text-transform: none;
-}
-
-.newsletter form .btn {
-  margin-top: 0;
 }
 
 .footer .box-container {
@@ -468,6 +459,13 @@ section {
 }
 
 @media (max-width: 768px) {
+  .contact-and-maps {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
+  }
   #menu-bar {
     display: initial;
   }
@@ -537,6 +535,12 @@ section {
 }
 
 @media (max-width: 450px) {
+  .features .box-container {
+    gap: 0;
+  }
+  .features .box-container .box {
+    padding: 1.5rem;
+  }
   html {
     font-size: 50%;
   }

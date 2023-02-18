@@ -15,8 +15,13 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="products-styles.css" />
     <link rel="stylesheet" href="testimonials-styles.css" />
+    <link rel="stylesheet" href="slides.css" />
   </head>
   <body>
+    <a href="https://wa.me/7720999143" class="whatsapp-btn">
+      <img src="./images/WhatsAppButtonGreenLarge.svg" alt="" />
+    </a>
+
     <!-- header section starts  -->
 
     <header>
@@ -40,15 +45,51 @@
 
     <!-- home section starts  -->
 
-    <section class="home" id="home">
-      <div class="image">
-        <img src="images/girl-with-mango-removebg-preview.png" alt="" />
-      </div>
+    <section id="home">
+      <div class="carousel" data-carousel>
+        <button class="carousel-button prev" data-carousel-button="prev">
+          &#8656;
+        </button>
+        <button class="carousel-button next" data-carousel-button="next">
+          &#8658;
+        </button>
+        <ul data-slides>
+          <li class="slide home" data-active>
+            <div class="image">
+              <img src="images/girl-with-mango-removebg-preview.png" alt="" />
+            </div>
 
-      <div class="content">
-        <span>Make Freshness Your Habit Not Your Choice!</span>
-        <h3>Fresh and Organic Fruits</h3>
-        <a href="#" class="btn">Book Now</a>
+            <div class="content">
+              <span>Make Freshness Your Habit Not Your Choice!</span>
+              <h3>Fresh and Organic Fruits</h3>
+              <a href="#" class="btn">Book Now</a>
+            </div>
+          </li>
+
+          <li class="slide home">
+            <div class="image">
+              <img src="images/girl-with-mango-removebg-preview.png" alt="" />
+            </div>
+
+            <div class="content">
+              <span>Make Freshness Your Habit Not Your Choice!</span>
+              <h3>Fresh and Organic</h3>
+              <a href="#" class="btn">Book Now</a>
+            </div>
+          </li>
+
+          <li class="slide home">
+            <div class="image">
+              <img src="images/girl-with-mango-removebg-preview.png" alt="" />
+            </div>
+
+            <div class="content">
+              <span>Make Freshness Your Habit Not Your Choice!</span>
+              <h3>Fresh and Organic Fruits</h3>
+              <a href="#" class="btn">Book Now</a>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -58,10 +99,10 @@
 
     <section class="banner-container">
       <div class="banner">
-        <img src="images/banner-1.jpg" alt="" />
+        <img src="images/banner-3.png" alt="" />
         <div class="content">
           <h3>special offer</h3>
-          <p>upto 45% off</p>
+          <p>upto 25% off on mangos</p>
           <!-- <a href="#" class="btn">check out</a> -->
         </div>
       </div>
@@ -70,7 +111,7 @@
         <img src="images/banner-2.jpg" alt="" />
         <div class="content">
           <h3>limited offer</h3>
-          <p>upto 50% off</p>
+          <p>upto 30% off on juices</p>
           <!-- <a href="#" class="btn">check out</a> -->
         </div>
       </div>
@@ -132,7 +173,7 @@
             </div>
 
             <a class="cart" href="./categories/mangos.html">
-              <span class="price">₹120</span>
+              <span class="price">Mangos</span>
               <span class="add-to-cart">
                 <span class="txt"> Explore More</span>
               </span>
@@ -182,7 +223,7 @@
             </div>
 
             <a class="cart" href="./categories/softy.html">
-              <span class="price">₹120</span>
+              <span class="price">Softy</span>
               <span class="add-to-cart">
                 <span class="txt">Explore More</span>
               </span>
@@ -207,7 +248,7 @@
             </div>
 
             <a class="cart" href="./categories/ice-cream.html">
-              <span class="price">₹120</span>
+              <span class="price">Ice-Cream</span>
               <span class="add-to-cart">
                 <span class="txt">Explore More</span>
               </span>
@@ -232,7 +273,7 @@
             </div>
 
             <a class="cart" href="./categories/shakes.html">
-              <span class="price">₹120</span>
+              <span class="price">Shakes</span>
               <span class="add-to-cart">
                 <span class="txt">Explore More</span>
               </span>
@@ -257,7 +298,7 @@
             </div>
 
             <a class="cart" href="./categories/soda.html">
-              <span class="price">₹120</span>
+              <span class="price">Soda</span>
               <span class="add-to-cart">
                 <span class="txt">Explore More</span>
               </span>
@@ -291,7 +332,7 @@
             </div>
 
             <a class="cart" href="https://wa.me/c/917720999143">
-              <span class="price">₹120</span>
+              <span class="price">Mangos</span>
               <span class="add-to-cart">
                 <span class="txt">Book Now</span>
               </span>
@@ -316,7 +357,7 @@
             </div>
 
             <a class="cart" href="https://wa.me/c/917720999143">
-              <span class="price">₹120</span>
+              <span class="price">Ice-Cream</span>
               <span class="add-to-cart">
                 <span class="txt">Book Now</span>
               </span>
@@ -341,7 +382,7 @@
             </div>
 
             <a class="cart" href="https://wa.me/c/917720999143">
-              <span class="price">₹120</span>
+              <span class="price">Juices</span>
               <span class="add-to-cart">
                 <span class="txt">Book Now</span>
               </span>
@@ -389,44 +430,49 @@
     <!-- Testimonials section ends -->
     <!-- contact section starts  -->
 
-    <section class="contact" id="contact">
+    <section class="contact-and-maps-container" id="contact">
       <h1 class="heading"><span>contact</span> us</h1>
-
-      <form action="">
-        <div class="inputBox">
-          <input type="text" placeholder="name" />
-          <input type="email" placeholder="email" />
+      <div class="contact-and-maps">
+        <div class="maps">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d70437.3159265364!2d73.85198019829221!3d18.530415991875742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bff990000001%3A0x3291e3e36f9ad234!2sPune-Okayama%20Friendship%20Garden!5e0!3m2!1sen!2sin!4v1676741780697!5m2!1sen!2sin"
+            width="100%"
+            height="450px"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
+        <div class="contact">
+          <form action="">
+            <div class="inputBox">
+              <input type="text" placeholder="name" />
+              <input type="email" placeholder="email" />
+            </div>
 
-        <div class="inputBox">
-          <input type="number" placeholder="number" />
-          <input type="text" placeholder="subject" />
+            <div class="inputBox">
+              <input type="number" placeholder="number" />
+              <input type="text" placeholder="subject" />
+            </div>
+
+            <textarea
+              placeholder="message"
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+            ></textarea>
+
+            <input type="submit" value="send message" class="btn" />
+          </form>
         </div>
-
-        <textarea
-          placeholder="message"
-          name=""
-          id=""
-          cols="30"
-          rows="10"
-        ></textarea>
-
-        <input type="submit" value="send message" class="btn" />
-      </form>
+      </div>
     </section>
 
     <!-- contact section ends -->
 
     <!-- newsletter section starts  -->
-
-    <section class="newsletter">
-      <h3>subscribe us for latest updates</h3>
-
-      <form action="">
-        <input class="box" type="email" placeholder="enter your email" />
-        <input type="submit" value="subscribe" class="btn" />
-      </form>
-    </section>
 
     <!-- newsletter section ends -->
 
