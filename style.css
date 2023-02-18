@@ -108,7 +108,7 @@ section {
 }
 
 .header-2.active {
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
   right: 0;
@@ -183,6 +183,7 @@ section {
 
 .home .content h3 {
   font-size: 5rem;
+  margin: 2rem 0;
   color: var(--black);
 }
 
