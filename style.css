@@ -75,9 +75,17 @@ section {
 
 .whatsapp-btn {
   position: fixed;
-  right: 5px;
-  bottom: 5px;
+  right: 15px;
+  bottom: 15px;
   z-index: 100;
+}
+.whatsapp-btn img {
+  width: 8rem;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-btn:hover img {
+  transform: scale(1.2); /* Scale up the image on hover */
 }
 
 .heading {
@@ -338,6 +346,39 @@ section {
   width: 100%;
   padding: 0.5rem;
   font-size: 2rem;
+}
+
+.newsletter {
+  background: url(../images/newsletter-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.newsletter h3 {
+  font-size: 3rem;
+  color: var(--black);
+}
+.rateUsonGoogle-desc {
+  text-align: center;
+  margin: 2rem 1rem;
+}
+.rateUsonGoogle-desc span {
+  max-width: 70rem;
+  text-align: center;
+}
+
+.newsletter form .box {
+  width: 100%;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.7rem;
+  color: #333;
+  text-transform: none;
+}
+
+.newsletter form .btn {
+  margin-top: 0;
 }
 
 .contact-and-maps {

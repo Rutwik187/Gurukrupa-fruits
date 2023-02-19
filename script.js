@@ -51,32 +51,33 @@ window.onscroll = () => {
 //Testimonial Data
 const testimonials = [
     {
-        name: "Eva Sawyer",
-        job: "CEO, Fashworks",
-        image: "https://i.postimg.cc/mgp4pfz5/profile-image-1.png",
+        name: "Aarav Patel",
+        // job: "CEO, Fashworks",
+
+        image: "./images/testimonial-avatar1.png",
         testimonial:
-            "Neque volutpat ac tincidunt vitae semper quis lectus nulla at volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur",
+            "I just received my first box of fruit from this website, and I'm blown away by the quality! Everything was so fresh and delicious. I can't wait to order again.",
     },
     {
-        name: "Nitin Gadkari",
-        job: "Politician",
-        image: "https://i.postimg.cc/PfSSwtB9/profile-image-2.png",
+        name: "Rohit Singh",
+        // job: "Politician",
+        image: "./images/testimonial-avatar2.png",
         testimonial:
-            "Elementum tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante in nibh mauris cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet nulla",
+            "I was skeptical about ordering fruit online, but this website exceeded my expectations. The fruit was ripe and juicy, and the ordering process was easy.",
     },
     {
-        name: "Akshay Kumar",
-        job: "Actor",
-        image: "https://i.postimg.cc/W4mnbjG9/profile-image-3.png",
+        name: "Anjali Sharma",
+        // job: "Actor",
+        image: "./images/testimonial-avatar3.png",
         testimonial:
-            "Orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in pellentesque massa placerat duis ultricies lacus sed turpis",
+            "I was impressed by the variety of fruits available on this website. I was able to get everything I needed for a tropical fruit salad, and it turned out delicious!",
     },
     {
-        name: "Rajesh Mehata",
-        job: "Product Manager",
-        image: "https://i.postimg.cc/xdLsJL23/profile-image-4.png",
+        name: "Priya Menon",
+        // job: "Product Manager",
+        image: "./images/testimonial-avatar4.png",
         testimonial:
-            "Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit",
+            "I appreciate that this website offers organic and locally sourced fruits. It's great to know that I'm supporting small farmers while getting delicious fruits.",
     },
 ];
 
@@ -103,27 +104,43 @@ let displayTestimonial = () => {
       <p>${testimonials[i].testimonial}</p>
       <img src=${testimonials[i].image}>
       <h3>${testimonials[i].name}</h3>
-      <h6>${testimonials[i].job}</h6>
     `;
 };
 window.onload = displayTestimonial;
 
 // carousel
-const CarouselButtons = document.querySelectorAll("[data-carousel-button]")
+const CarouselButtons = document.querySelectorAll("[data-carousel-button]");
 
 CarouselButtons.forEach(button => {
     button.addEventListener("click", () => {
-        const offset = button.dataset.carouselButton === "next" ? 1 : -1
-        const slides = button
-            .closest("[data-carousel]")
-            .querySelector("[data-slides]")
+        const offset = button.dataset.carouselButton === "next" ? 1 : -1;
+        const slides = button.closest("[data-carousel]").querySelector("[data-slides]");
 
-        const activeSlide = slides.querySelector("[data-active]")
-        let newIndex = [...slides.children].indexOf(activeSlide) + offset
-        if (newIndex < 0) newIndex = slides.children.length - 1
-        if (newIndex >= slides.children.length) newIndex = 0
+        const activeSlide = slides.querySelector("[data-active]");
+        let newIndex = [...slides.children].indexOf(activeSlide) + offset;
+        if (newIndex < 0) newIndex = slides.children.length - 1;
+        if (newIndex >= slides.children.length) newIndex = 0;
 
-        slides.children[newIndex].dataset.active = true
-        delete activeSlide.dataset.active
-    })
-})
+        slides.children[newIndex].dataset.active = true;
+        delete activeSlide.dataset.active;
+    });
+});
+
+const autoSlideDelay = 5000; // Delay between automatic slides (in milliseconds)
+
+let autoSlideInterval = setInterval(() => {
+    const nextButton = document.querySelector("[data-carousel-button='next']");
+    nextButton.click();
+}, autoSlideDelay);
+
+// Stop automatic sliding when user interacts with the carousel
+const carousel = document.querySelector("[data-carousel]");
+carousel.addEventListener("mouseenter", () => {
+    clearInterval(autoSlideInterval);
+});
+carousel.addEventListener("mouseleave", () => {
+    autoSlideInterval = setInterval(() => {
+        const nextButton = document.querySelector("[data-carousel-button='next']");
+        nextButton.click();
+    }, autoSlideDelay);
+});
