@@ -56,28 +56,28 @@ const testimonials = [
 
         image: "./images/testimonial-avatar1.png",
         testimonial:
-            "I just received my first box of fruit from this website, and I'm blown away by the quality! Everything was so fresh and delicious. I can't wait to order again.",
+            "I just received my first box of mangos from this website, and I'm blown away by the quality! Everything was so fresh and delicious. I can't wait to order again.",
     },
     {
         name: "Rohit Singh",
         // job: "Politician",
         image: "./images/testimonial-avatar2.png",
         testimonial:
-            "I was skeptical about ordering fruit online, but this website exceeded my expectations. The fruit was ripe and juicy, and the ordering process was easy.",
+            "I was skeptical about ordering mangos online, but this website exceeded my expectations. The mangos was ripe and juicy, and the ordering process was easy.",
     },
     {
         name: "Ajay Sharma",
         // job: "Actor",
         image: "./images/testimonial-avatar3.png",
         testimonial:
-            "I was impressed by the variety of fruits available on this website. I was able to get everything I needed for a tropical fruit salad, and it turned out delicious!",
+            "I was impressed by the variety of mangoss available on this website. I was able to get everything I needed for a tropical mangos salad, and it turned out delicious!",
     },
     {
         name: "Pritam Menon",
         // job: "Product Manager",
         image: "./images/testimonial-avatar4.png",
         testimonial:
-            "I appreciate that this website offers organic and locally sourced fruits. It's great to know that I'm supporting small farmers while getting delicious fruits.",
+            "I appreciate that this website offers organic and locally sourced mangoss. It's great to know that I'm supporting small farmers while getting delicious mangoss.",
     },
 ];
 
