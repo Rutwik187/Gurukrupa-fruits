@@ -66,14 +66,14 @@ const testimonials = [
             "I was skeptical about ordering fruit online, but this website exceeded my expectations. The fruit was ripe and juicy, and the ordering process was easy.",
     },
     {
-        name: "Anjali Sharma",
+        name: "Ajay Sharma",
         // job: "Actor",
         image: "./images/testimonial-avatar3.png",
         testimonial:
             "I was impressed by the variety of fruits available on this website. I was able to get everything I needed for a tropical fruit salad, and it turned out delicious!",
     },
     {
-        name: "Priya Menon",
+        name: "Pritam Menon",
         // job: "Product Manager",
         image: "./images/testimonial-avatar4.png",
         testimonial:

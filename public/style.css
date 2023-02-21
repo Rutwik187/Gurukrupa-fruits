@@ -21,7 +21,7 @@
   outline: none;
   border: none;
   text-decoration: none;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   transition: all 0.2s linear;
   /* position: relative; */
 }
@@ -108,9 +108,9 @@ section {
   font-size: 3rem;
 }
 
-.logo i {
+.logo img {
   padding-right: 0.5rem;
-  color: var(--yellow);
+  width: 10rem;
 }
 
 .header-2 {
@@ -118,7 +118,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 9%;
+  padding: 0rem 9%;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   position: relative;
 }
@@ -295,7 +295,7 @@ section {
 }
 
 .deal {
-  background: url(../images/deal-bg.jpg) no-repeat;
+  background: url(./images/deal-bg.jpg) no-repeat;
   background-position: center;
   background-size: cover;
   padding-top: 7rem;
@@ -349,7 +349,7 @@ section {
 }
 
 .newsletter {
-  background: url(../images/newsletter-bg.jpg) no-repeat;
+  background: url(../images/review-banner.png) no-repeat;
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -491,7 +491,7 @@ section {
 @media (max-width: 991px) {
   .header-1,
   .header-2 {
-    padding: 2rem;
+    /* padding: 2rem; */
   }
 
   section {
