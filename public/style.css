@@ -349,7 +349,7 @@ section {
 }
 
 .newsletter {
-  background: url(../images/review-banner.png) no-repeat;
+  background: url(../public/images/review-banner.png) no-repeat;
   background-size: cover;
   background-position: center;
   text-align: center;
