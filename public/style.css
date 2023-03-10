@@ -119,7 +119,7 @@ section {
   align-items: center;
   justify-content: space-between;
   padding: 0rem 9%;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); */
   position: relative;
 }
 
